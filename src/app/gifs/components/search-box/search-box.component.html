@@ -1,0 +1,20 @@
+<nav class="navbar navbar-light bg-light p-3">
+  <h3>Buscador:</h3>
+  <input
+    class="form-control mr-sm-2 flex-fill"
+    type="text"
+    placeholder="Buscar gif..."
+    aria-label="Buscar gif..."
+    (keyup.enter)="searchTag()"
+    #txtSearchGifsTagInput
+  />
+  <!-- ? Igual que el (click), existe el (keyup.enter), que lo que hace es: -->
+  <!-- ? cuando hagamos keyup con el enter, se seteará el valor del input -->
+  <!-- ! El #txtSearchGifsTagInput es un ref de tipo local -->
+  <!-- ! Por así decirlo es el selector de ese input -->
+
+  <!-- * Existen 2 formas de hacer esto: -->
+  <!-- * 1. Crear la ref + función pasando el value del red por la función -->
+  <!-- *    (keyup.enter)="searchTag(txtSearchGifsTagInput.value)" -->
+  <!-- * 2. Usar la ref en el .ts con ayuda del @ViewChild("txtSearchGifsTagInput") -->
+</nav>
